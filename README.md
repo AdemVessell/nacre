@@ -41,7 +41,7 @@ $$
 The radial phase field winds an integer number of arms while adding a logarithmic twist:
 
 $$
-r=\max(\sqrt{x^2+y^2},10^{-4}),\qquad \theta=\operatorname{atan2}(y,x),
+r=\max(\sqrt{x^2+y^2},10^{-4}),\qquad \theta=\mathrm{atan2}(y,x),
 $$
 
 $$
@@ -55,7 +55,7 @@ E=e^{-(r/0.76)^8},\qquad B=1-e^{-r^2/0.008},\qquad A=EB,
 $$
 
 $$
-H=0.10\,\rho\,A(0.16+f^3).
+H=0.10 \rho A(0.16+f^3).
 $$
 
 The reference computes the derivatives analytically rather than estimating them from neighbouring pixels:
@@ -70,13 +70,13 @@ H_y=H_r\frac{y}{r}+H_\theta\frac{x}{r^2},
 $$
 
 $$
-N=\operatorname{normalize}(-H_x,-H_y,1).
+N=\mathrm{normalize}(-H_x,-H_y,1).
 $$
 
 An authored light direction turns `N` into diffuse and specular terms. The palette is:
 
 $$
-P=0.58+0.31\cos\!\left(3r+0.6N_z+\text{hue}+(0,1.2,2.7)\right).
+P=0.58+0.31\cos\left(3r+0.6N_z+\text{hue}+(0,1.2,2.7)\right).
 $$
 
 The selected construction stage blends its colour with a smooth radial mask and the dark background. The finished stage adds grazing tint, then maps colour to display values:
