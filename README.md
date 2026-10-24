@@ -48,6 +48,8 @@ $$
 q=n\theta-k\log(r^2+0.008)+\phi,\qquad f=\frac{1+\cos q}{2}.
 $$
 
+Here `n = arms`, `k = twist`, `φ = phase`, and `ρ = relief`. Inside the tiny center regularization disc, the implementation explicitly fixes the angle and normal as specified in SPEC.md.
+
 The height is an authored relief field. `E`, `B`, and `A` keep it finite at the centre and fade it toward the rim:
 
 $$
