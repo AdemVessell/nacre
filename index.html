@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1114">
+  <meta name="description" content="NACRE — an equation-led pixel artwork made directly from a compact colour function.">
+  <title>NACRE · a shell that never existed — Arkhē</title>
+  <link rel="canonical" href="https://www.xn--arkh-eva.org/nacre/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NACRE — a shell that never existed">
+  <meta property="og:description" content="A pearlescent spiral made directly from a compact colour function. Explore the equations, change the pixels, reproduce the result.">
+  <meta property="og:url" content="https://www.xn--arkh-eva.org/nacre/">
+  <meta property="og:image" content="https://www.xn--arkh-eva.org/nacre/proof/nacre.png">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="1200">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="vendor/fonts.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell" id="top">
+    <header class="masthead">
+      <a class="wordmark" href="#top" aria-label="Nacre home">NACRE</a>
+      <nav class="masthead-note" aria-label="NACRE navigation"><a href="https://www.xn--arkh-eva.org/work/">Arkhē</a><a href="https://www.xn--arkh-eva.org/tidelight/">TIDELIGHT</a><a href="https://github.com/AdemVessell/nacre" id="github-source">GitHub ↗</a></nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow">DIRECT EQUATION ARTWORK</p>
+          <h1 id="page-title">A shell that<br><em>never existed.</em></h1>
+          <p class="lede">A coordinate becomes a colour. Eleven folds emerge from a winding cosine. Every fold, highlight and hue comes from the 1.6 KB pixel function you can inspect below.</p>
+          <div class="hero-notes" aria-label="Artwork properties">
+            <span><b>01</b> coordinate in</span>
+            <span><b>02</b> colour out</span>
+            <span><b>03</b> deterministic</span>
+          </div>
+        </div>
+        <aside class="hero-aside" aria-label="Current state">
+          <p class="aside-label">CURRENT STUDY</p>
+          <p class="aside-title" id="hero-stage-title">Finished / pearl</p>
+          <p class="aside-copy">The controls are intentionally small. Change one parameter, watch the entire field answer.</p>
+          <a class="text-link" href="SPEC.md">Read the direct-pixel contract <span aria-hidden="true">↗</span></a>
+        </aside>
+      </section>
+
+      <div class="studio">
+      <section class="art-section" aria-labelledby="art-title">
+        <div class="section-line"><h2 id="art-title">The living equation</h2><span class="line" aria-hidden="true"></span><span id="render-size">1200 × 900 px</span></div>
+        <div class="art-frame">
+          <canvas id="nacre-canvas" width="1200" height="900" tabindex="0" aria-label="Live NACRE equation artwork. Click to inspect a pixel."></canvas>
+          <div class="art-overlay"><span id="stage-badge">05 / FINISHED</span><span id="renderer-badge">initialising renderer</span></div>
+          <div class="pixel-inspector" id="pixel-inspector" aria-live="polite"><span class="inspector-swatch" id="inspector-swatch"></span><span id="inspector-text">Click the artwork to inspect a pixel.</span></div>
+        </div>
+        <div class="art-caption">
+          <div><p class="caption-kicker" id="caption-kicker">NACRE / 05</p><p class="caption-title" id="caption-title">The field resolves into a nacreous spiral.</p></div>
+          <div class="caption-actions"><p id="caption-copy">A live formula, evaluated in the browser. The phase control is an authored change of state, not fluid motion.</p><button class="button button-light" id="download-png" type="button">Export PNG <span aria-hidden="true">↗</span></button><span class="action-status" id="png-status" role="status"></span></div>
+        </div>
+        <div class="system-alert" id="system-alert" role="alert" hidden></div>
+      </section>
+
+      <section class="construction" aria-labelledby="construction-title">
+        <div class="section-line"><h2 id="construction-title">Five decisions</h2><span class="line" aria-hidden="true"></span><span>guided construction</span></div>
+        <div class="construction-grid">
+          <div class="stage-list" id="stage-list" role="group" aria-label="Construction stages">
+            <button class="stage-button" type="button" data-stage="0"><span>01</span><strong>Blank</strong><small>background field</small></button>
+            <button class="stage-button" type="button" data-stage="1"><span>02</span><strong>Spiral</strong><small>coordinate winding</small></button>
+            <button class="stage-button" type="button" data-stage="2"><span>03</span><strong>Relief</strong><small>analytic normal</small></button>
+            <button class="stage-button" type="button" data-stage="3"><span>04</span><strong>Pigment</strong><small>pearl palette</small></button>
+            <button class="stage-button" type="button" data-stage="4"><span>05</span><strong>Finished</strong><small>light + display</small></button>
+          </div>
+          <article class="equation-panel" aria-live="polite" aria-atomic="true">
+            <p class="eyebrow" id="equation-kicker">STAGE 05 / FINISHED</p>
+            <h3 id="equation-title">Light lets the spiral become a surface.</h3>
+            <div class="formula" id="equation-formula" aria-label="Current stage equation">C = P(0.16 + 0.90d) + s(1.10, 1.00, 0.95) + (1 − N<sub>z</sub>)³(0.13, 0.30, 0.32)</div>
+            <p class="equation-description" id="equation-description">The final field combines the authored pearl palette with analytic relief, a soft specular response and a display curve.</p>
+            <p class="notation"><span>VISIBLE HELPERS</span> <code>c = clamp(a, 0, 1)</code> · <code>S(a) = c²(3 − 2c)</code> · <code>m = S((.835 + .026 cos q − r)/.018)</code> · <code>D = (1 − exp(−1.25 · max((1−m)b + mC, 0)))^(1/2.2)</code> · <a href="SPEC.md">full equation contract ↗</a></p>
+          </article>
+        </div>
+        <div class="construction-actions">
+          <button class="button button-light" id="construction-play" type="button"><span class="play-mark" aria-hidden="true">▶</span> Play construction</button>
+          <button class="button button-quiet" id="phase-toggle" type="button" aria-pressed="false"><span class="phase-mark" aria-hidden="true">◌</span> Animate phase</button>
+          <span class="action-status" id="animation-status" role="status">Finished / static</span>
+        </div>
+      </section>
+
+      <section class="controls" aria-labelledby="controls-title">
+        <div class="section-line"><h2 id="controls-title">Edit the field</h2><span class="line" aria-hidden="true"></span><span>live parameters</span></div>
+        <div class="controls-layout">
+          <div class="control-column">
+            <div class="control-heading"><h3>Structure</h3><span>shape</span></div>
+            <label class="slider-control" for="control-arms"><span><b>arms</b><small>integer winding count</small></span><output id="value-arms" for="control-arms">11</output><input id="control-arms" type="range" min="3" max="21" step="1" value="11"></label>
+            <label class="slider-control" for="control-twist"><span><b>twist</b><small>radial phase / k</small></span><output id="value-twist" for="control-twist">5.5</output><input id="control-twist" type="range" min="-9" max="9" step="0.1" value="5.5"></label>
+            <label class="slider-control" for="control-relief"><span><b>relief</b><small>height response</small></span><output id="value-relief" for="control-relief">1.00</output><input id="control-relief" type="range" min="0" max="1.5" step="0.01" value="1"></label>
+          </div>
+          <div class="control-column">
+            <div class="control-heading"><h3>Illumination</h3><span>colour + light</span></div>
+            <label class="slider-control" for="control-light"><span><b>light</b><small>direction / radians</small></span><output id="value-light" for="control-light">0.00</output><input id="control-light" type="range" min="-3.14" max="3.14" step="0.01" value="0"></label>
+            <label class="slider-control" for="control-hue"><span><b>hue</b><small>palette / radians</small></span><output id="value-hue" for="control-hue">0.00</output><input id="control-hue" type="range" min="-3.14" max="3.14" step="0.01" value="0"></label>
+            <label class="slider-control slider-phase" for="control-phase"><span><b>phase</b><small>authored state</small></span><output id="value-phase" for="control-phase">0.00</output><input id="control-phase" type="range" min="-6.284" max="6.284" step="0.001" value="0"></label>
+          </div>
+          <div class="control-column presets-column">
+            <div class="control-heading"><h3>Three readings</h3><span>presets</span></div>
+            <div class="preset-list" role="group" aria-label="Nacre presets">
+              <button type="button" class="preset-button" data-preset="moon"><span>01</span><b>Moon shell</b><small>11 / 5.5 / pearl</small></button>
+              <button type="button" class="preset-button" data-preset="blue"><span>02</span><b>Counterturn</b><small>13 / −3.5 / reverse</small></button>
+              <button type="button" class="preset-button" data-preset="rose"><span>03</span><b>Silver tide</b><small>7 / 7.25 / silver</small></button>
+            </div>
+            <button class="reset-button" id="reset-state" type="button">Reset to Moon shell <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+      </section>
+
+      </div>
+      <section class="proof" aria-labelledby="proof-title">
+        <div class="section-line"><h2 id="proof-title">Verification</h2><span class="line" aria-hidden="true"></span><span>evidence</span></div>
+        <div class="proof-grid">
+          <div><p class="proof-lede">The JavaScript and separate Python implementations are compared pixel by pixel. The browser checks its GPU output against the same complete formula, including controls that deliberately flatten the folds.</p><div class="proof-status" id="proof-status" data-state="loading"><span class="proof-dot" aria-hidden="true"></span><div><b id="proof-status-title">Reading REPORT.json…</b><p id="proof-status-detail">The current receipt will appear here.</p></div></div></div>
+          <div class="proof-links"><a href="https://github.com/AdemVessell/nacre#reproduce-the-pixels">Source &amp; reproduction guide ↗</a><a href="proof/nacre.png" download>Download the finished artwork ↗</a><a href="proof/qa.html">Run browser checks ↗</a><a href="proof/REPORT.json">Read verification result <span aria-hidden="true">↗</span></a><a href="SPEC.md">Read SPEC.md <span aria-hidden="true">↗</span></a><button type="button" id="export-json">Export state JSON <span aria-hidden="true">↗</span></button><button type="button" id="import-json-button">Import checked JSON <span aria-hidden="true">↗</span></button><button type="button" id="show-source">Inspect Nacre.source <span aria-hidden="true">↗</span></button></div>
+        </div>
+        <details class="source-disclosure" id="source-disclosure"><summary>Complete equation / CPU source disclosure</summary><p>NACRE is direct pixel code. WebGL may execute the same arithmetic in parallel; the fallback path is the same written pixel contract. The palette, background, analytic lighting and display curve are included below — this is not a shell/fluid simulation, physical material model, photo fit or hidden raster.</p><pre id="source-code">Loading Nacre.source…</pre></details>
+      </section>
+
+      <section class="share-boundary" aria-label="Scope note"><p><span aria-hidden="true">✳</span> A direct pixel illustration, not a physical shell simulation or a reconstruction of a photograph. Inspired by the practice of constructing pictures from mathematical functions.</p></section>
+    </main>
+    <footer class="footer"><span>NACRE / direct pixel contract v1</span><span>Adem Vessell / Arkhē · created with Codex · <a href="NOTICE.md">Credits &amp; notices</a></span></footer>
+  </div>
+
+  <noscript><p class="no-script">JavaScript runs the interactive equations. <a href="proof/nacre.png">View the finished artwork</a> or <a href="SPEC.md">read the mathematics</a>.</p></noscript>
+  <input id="import-json" type="file" accept="application/json,.json" hidden>
+  <script src="vendor/katex/katex.min.js"></script>
+  <script src="src/nacre.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

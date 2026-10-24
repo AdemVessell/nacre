@@ -1,0 +1,240 @@
+{
+  "status": "PASS",
+  "date": "2026-10-24",
+  "checks": [
+    {
+      "name": "JS_NumPy_float_samples",
+      "pass": true,
+      "max_error": 1.4488410471358293e-14,
+      "parameter_states": 69,
+      "coordinates_per_state": 176,
+      "rgb_values": 36432
+    },
+    {
+      "name": "full_1200x900_RGBA_comparison",
+      "pass": true,
+      "max_byte_error": 0,
+      "different_bytes": 0,
+      "exact": true,
+      "sha256_numpy": "7d3dd763b944f97ef58db38d77d9dd5b6558dd2b03dd57b805747073444072fd",
+      "sha256_node": "7d3dd763b944f97ef58db38d77d9dd5b6558dd2b03dd57b805747073444072fd"
+    },
+    {
+      "name": "invalid_states_and_dimensions_rejected",
+      "pass": true,
+      "cases": 15
+    },
+    {
+      "name": "reference_mechanism_tests_including_gradient_mutation",
+      "pass": true,
+      "test_count": 15
+    },
+    {
+      "name": "GPU_vs_CPU_default",
+      "pass": true,
+      "max_byte_error": 1,
+      "mean_byte_error": 9.382716049382717e-05,
+      "channels_over_2": 0,
+      "channels": 810000,
+      "different_channels": 76
+    },
+    {
+      "name": "repeat_default",
+      "pass": true
+    },
+    {
+      "name": "GPU_vs_CPU_spiral",
+      "pass": true,
+      "max_byte_error": 1,
+      "mean_byte_error": 8.395061728395062e-05,
+      "channels_over_2": 0,
+      "channels": 810000,
+      "different_channels": 68
+    },
+    {
+      "name": "repeat_spiral",
+      "pass": true
+    },
+    {
+      "name": "GPU_vs_CPU_relief",
+      "pass": true,
+      "max_byte_error": 1,
+      "mean_byte_error": 0.00010246913580246913,
+      "channels_over_2": 0,
+      "channels": 810000,
+      "different_channels": 83
+    },
+    {
+      "name": "repeat_relief",
+      "pass": true
+    },
+    {
+      "name": "GPU_vs_CPU_pigment",
+      "pass": true,
+      "max_byte_error": 1,
+      "mean_byte_error": 8.518518518518518e-05,
+      "channels_over_2": 0,
+      "channels": 810000,
+      "different_channels": 69
+    },
+    {
+      "name": "repeat_pigment",
+      "pass": true
+    },
+    {
+      "name": "GPU_vs_CPU_blank",
+      "pass": true,
+      "max_byte_error": 1,
+      "mean_byte_error": 0.0001037037037037037,
+      "channels_over_2": 0,
+      "channels": 810000,
+      "different_channels": 84
+    },
+    {
+      "name": "repeat_blank",
+      "pass": true
+    },
+    {
+      "name": "GPU_vs_CPU_flat",
+      "pass": true,
+      "max_byte_error": 1,
+      "mean_byte_error": 7.407407407407407e-05,
+      "channels_over_2": 0,
+      "channels": 810000,
+      "different_channels": 60
+    },
+    {
+      "name": "repeat_flat",
+      "pass": true
+    },
+    {
+      "name": "GPU_vs_CPU_radial",
+      "pass": true,
+      "max_byte_error": 1,
+      "mean_byte_error": 9.506172839506173e-05,
+      "channels_over_2": 0,
+      "channels": 810000,
+      "different_channels": 77
+    },
+    {
+      "name": "repeat_radial",
+      "pass": true
+    },
+    {
+      "name": "GPU_vs_CPU_dense",
+      "pass": true,
+      "max_byte_error": 1,
+      "mean_byte_error": 0.0001308641975308642,
+      "channels_over_2": 0,
+      "channels": 810000,
+      "different_channels": 106
+    },
+    {
+      "name": "repeat_dense",
+      "pass": true
+    },
+    {
+      "name": "GPU_vs_CPU_reverse",
+      "pass": true,
+      "max_byte_error": 1,
+      "mean_byte_error": 0.00010617283950617284,
+      "channels_over_2": 0,
+      "channels": 810000,
+      "different_channels": 86
+    },
+    {
+      "name": "repeat_reverse",
+      "pass": true
+    },
+    {
+      "name": "blank_independent",
+      "pass": true
+    },
+    {
+      "name": "pigment_light_independent",
+      "pass": true
+    }
+  ],
+  "source_sha256": {
+    "src/nacre.js": "b573525a248a404cadf24649842e0d29185d6dcf94d334a130815549c420e124",
+    "reference.py": "ddd49f9e103f50477ac70bae8f3bc308ee55fc4b2b35adb102e65d664f12cff0",
+    "SPEC.md": "24a5b60bbd8244e4eaf0af7b17b49e910738b7ae968bd06a25041092e0d35c44"
+  },
+  "core": {
+    "rejected": 15,
+    "cpu_ms": 739.037583,
+    "node": "v26.12.1",
+    "core_lines": 26,
+    "core_utf8_bytes": 1591,
+    "glsl_utf8_bytes": 1379
+  },
+  "timing": {
+    "numpy_1200x900_seconds": 0.3540445830000001,
+    "numpy_1600x1200_seconds": 0.6578064160000001,
+    "scope": "one local run; excludes PNG encoding and imports"
+  },
+  "limits": [
+    "Finite implementation checks, not mathematical proof for every state.",
+    "Original authored pixel art, not physical material or shell simulation.",
+    "No input photographs, image assets, offline renderer or learned image generator in pixel function.",
+    "Browser float32 comparison recorded separately."
+  ],
+  "browser": {
+    "status": "PASS",
+    "version": "nacre-1",
+    "width": 600,
+    "height": 450,
+    "timings": [
+      {
+        "name": "default",
+        "gpu_draw_and_read_ms": 26.099999994039536,
+        "cpu_render_ms": 760
+      },
+      {
+        "name": "spiral",
+        "gpu_draw_and_read_ms": 2.2000000178813934,
+        "cpu_render_ms": 263.2999999821186
+      },
+      {
+        "name": "relief",
+        "gpu_draw_and_read_ms": 9.400000005960464,
+        "cpu_render_ms": 178.80000001192093
+      },
+      {
+        "name": "pigment",
+        "gpu_draw_and_read_ms": 2.4000000059604645,
+        "cpu_render_ms": 607.1999999880791
+      },
+      {
+        "name": "blank",
+        "gpu_draw_and_read_ms": 10.400000005960464,
+        "cpu_render_ms": 778.8000000119209
+      },
+      {
+        "name": "flat",
+        "gpu_draw_and_read_ms": 2.0999999940395355,
+        "cpu_render_ms": 148.09999999403954
+      },
+      {
+        "name": "radial",
+        "gpu_draw_and_read_ms": 2.699999988079071,
+        "cpu_render_ms": 643.4000000059605
+      },
+      {
+        "name": "dense",
+        "gpu_draw_and_read_ms": 3,
+        "cpu_render_ms": 661.8999999761581
+      },
+      {
+        "name": "reverse",
+        "gpu_draw_and_read_ms": 5.899999976158142,
+        "cpu_render_ms": 674
+      }
+    ],
+    "timing_note": "One local 600\u00d7450 run; GPU time includes synchronous readback, not a general performance benchmark.",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "renderer": "WebKit WebGL"
+  },
+  "ui_receipt": "UI_REPORT.json",
+  "ui_status": "HISTORICAL_LOCAL_CHECKS_WITH_LIMITS"
+}

@@ -1,0 +1,18 @@
+# Local Python environment and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+
+# Repro-only generated artefacts; saved proof reports and PNGs remain tracked.
+reproduced*.png
+reproduced*.rgba
+*.raw
+proof/probe-input.json
+proof/node-samples.json
+proof/node-default.rgba
+proof/node-metadata.json

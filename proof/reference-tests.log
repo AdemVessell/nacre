@@ -1,0 +1,20 @@
+test_analytic_gradients_match_finite_difference (test_reference.NacreReferenceTests) ... ok
+test_cli_output_and_raw_bytes (test_reference.NacreReferenceTests) ... ok
+test_cli_reproduces_exported_state_wrapper_and_rejects_malformed_wrapper (test_reference.NacreReferenceTests) ... ok
+test_coordinates_broadcast_and_bounds (test_reference.NacreReferenceTests) ... ok
+test_defaults_and_validation_are_exact_and_nonmutating (test_reference.NacreReferenceTests) ... ok
+test_dimensions_and_pixel_budget_are_checked (test_reference.NacreReferenceTests) ... ok
+test_phase_periodicity_and_integer_angular_seam (test_reference.NacreReferenceTests) ... ok
+test_regularization_boundary_ring_remains_finite (test_reference.NacreReferenceTests) ... ok
+test_regularization_disc_has_constant_gradient (test_reference.NacreReferenceTests) ... ok
+test_relief_zero_flattens_height_gradient_and_normal (test_reference.NacreReferenceTests) ... ok
+test_render_top_left_quantization_and_repeatability (test_reference.NacreReferenceTests) ... ok
+test_stage_three_ignores_light_and_stage_four_uses_it (test_reference.NacreReferenceTests) ... ok
+test_stage_zero_is_independent_of_all_scene_parameters (test_reference.NacreReferenceTests) ... ok
+test_validation_rejects_malformed_and_out_of_range_values (test_reference.NacreReferenceTests) ... ok
+test_zero_twist_removes_radial_winding (test_reference.NacreReferenceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.378s
+
+OK

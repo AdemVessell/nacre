@@ -1,0 +1,12 @@
+{
+  "format": "nacre-state-1",
+  "state": {
+    "arms": 11,
+    "twist": 5.5,
+    "relief": 1.0,
+    "hue": 0.0,
+    "light": 0.0,
+    "phase": 0.0,
+    "stage": 4
+  }
+}

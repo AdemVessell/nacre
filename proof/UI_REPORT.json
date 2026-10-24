@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-24",
+  "status": "PASS_WITH_LIMITS",
+  "checks": [
+    {
+      "name": "desktop_layout",
+      "pass": true,
+      "viewport_width": 2140,
+      "document_width": 2140,
+      "katex_errors": 0,
+      "screenshot": "ui-desktop.png"
+    },
+    {
+      "name": "narrow_layout",
+      "pass": true,
+      "actual_viewport_width": 520,
+      "document_width": 520,
+      "katex_errors": 0,
+      "screenshot": "ui-narrow.png",
+      "limit": "Requested 390px; Chrome minimum produced 520px. This is a narrow desktop check, not verified 390px mobile."
+    },
+    {
+      "name": "guided_construction",
+      "pass": true,
+      "observed_start": "01 / BLANK",
+      "observed_end": "05 / FINISHED",
+      "completion": "Construction complete \u00b7 finished / static"
+    },
+    {
+      "name": "stage_selection_and_zero_relief",
+      "pass": true,
+      "observed": "Spiral and Relief buttons selected the expected stage; relief slider Home set 0.00 and flattened the relief view."
+    },
+    {
+      "name": "presets_phase_pause_reset",
+      "pass": true,
+      "observed": "Counterturn selected arms13/twist-3.5; Silver tide selected arms7; phase animation advanced to0.20; pause/reset restored default."
+    },
+    {
+      "name": "checked_state_import",
+      "pass": true,
+      "observed": "Default nacre-state-1 wrapper accepted; arms string rejected with Import rejected: Invalid arms; prior valid state remained."
+    },
+    {
+      "name": "pixel_inspector",
+      "pass": true,
+      "observed": "pixel599,449, x-0.001,y0.001, RGB208/182/153"
+    },
+    {
+      "name": "console_errors",
+      "pass": true,
+      "error_entries": []
+    },
+    {
+      "name": "PNG_preparation",
+      "pass": true,
+      "observed": "PNG prepared \u00b7 1600 \u00d7 1200",
+      "boundary": "Preparation only; browser download event timed out and saved download was not verified. Independent finished PNG is supplied in proof/nacre.png."
+    }
+  ],
+  "limits": [
+    "Browser PNG/JSON download persistence not verified; no saved-download claim.",
+    "390px mobile not verified; actual narrow viewport was520px.",
+    "A viewport reset call timed out; reconnect succeeded and the override was then explicitly reset to2140x1035."
+  ],
+  "source_sha256": {
+    "index.html": "aa8672c17357e1a1736e059e4a7dad1b04659906f90b9d26c7fd940a392220b1",
+    "style.css": "b65f8afafa30a5fb539d53b084cffcb035c53e744d6c38b1398795f690cba8c6",
+    "app.js": "94adc20cba8eb2f24e73f67f9d3e6d2b9fb2c9e6ae90431873cba2af20f56b36",
+    "src/nacre.js": "b573525a248a404cadf24649842e0d29185d6dcf94d334a130815549c420e124"
+  }
+}

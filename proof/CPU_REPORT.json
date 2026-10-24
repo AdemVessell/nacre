@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "date": "2026-10-24",
+  "checks": [
+    {
+      "name": "JS_NumPy_float_samples",
+      "pass": true,
+      "max_error": 1.4488410471358293e-14,
+      "parameter_states": 69,
+      "coordinates_per_state": 176,
+      "rgb_values": 36432
+    },
+    {
+      "name": "full_1200x900_RGBA_comparison",
+      "pass": true,
+      "max_byte_error": 0,
+      "different_bytes": 0,
+      "exact": true,
+      "sha256_numpy": "7d3dd763b944f97ef58db38d77d9dd5b6558dd2b03dd57b805747073444072fd",
+      "sha256_node": "7d3dd763b944f97ef58db38d77d9dd5b6558dd2b03dd57b805747073444072fd"
+    },
+    {
+      "name": "invalid_states_and_dimensions_rejected",
+      "pass": true,
+      "cases": 15
+    },
+    {
+      "name": "reference_mechanism_tests_including_gradient_mutation",
+      "pass": true,
+      "test_count": 15
+    }
+  ],
+  "source_sha256": {
+    "src/nacre.js": "b573525a248a404cadf24649842e0d29185d6dcf94d334a130815549c420e124",
+    "reference.py": "ddd49f9e103f50477ac70bae8f3bc308ee55fc4b2b35adb102e65d664f12cff0",
+    "SPEC.md": "24a5b60bbd8244e4eaf0af7b17b49e910738b7ae968bd06a25041092e0d35c44"
+  },
+  "core": {
+    "rejected": 15,
+    "cpu_ms": 739.037583,
+    "node": "v26.12.1",
+    "core_lines": 26,
+    "core_utf8_bytes": 1591,
+    "glsl_utf8_bytes": 1379
+  },
+  "timing": {
+    "numpy_1200x900_seconds": 0.3540445830000001,
+    "numpy_1600x1200_seconds": 0.6578064160000001,
+    "scope": "one local run; excludes PNG encoding and imports"
+  },
+  "limits": [
+    "Finite implementation checks, not mathematical proof for every state.",
+    "Original authored pixel art, not physical material or shell simulation.",
+    "No input photographs, image assets, offline renderer or learned image generator in pixel function.",
+    "Browser float32 comparison recorded separately."
+  ]
+}
